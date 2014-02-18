@@ -1,6 +1,8 @@
 # Panko
 
-Breadcrumb gem. Super WiP!
+Ruby breadcrumb trail generation the right way: object oriented outside the controller.
+
+Super WiP!
 
 ## TODO
 
