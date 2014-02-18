@@ -35,3 +35,7 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Thanks to
+
+Thanks to Scott Burton for letting us [take over](http://www.scottburton.me/) the brilliant "Panko" gem name.
