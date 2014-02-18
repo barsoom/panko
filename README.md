@@ -2,6 +2,12 @@
 
 Breadcrumb gem. Super WiP!
 
+## TODO
+
+  * specs
+  * docs
+  * re-implement what we currently depend on breadcrumbs_on_rails for
+
 ## Installation
 
 Add this line to your application's Gemfile:
