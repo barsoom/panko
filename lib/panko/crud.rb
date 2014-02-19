@@ -1,3 +1,5 @@
+require "panko/base"
+
 class Panko::Crud < Panko::Base
   pattr_initialize :controller, :persisted_record
 
