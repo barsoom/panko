@@ -11,15 +11,14 @@ class ItemBreadcrumbs < Panko::Crud
 end
 
 describe Panko::Crud, "#build" do
-  let(:controller) { double(:controller, action_name: action_name, root_path: "/") }
-
   context "in controller #index" do
-    let(:action_name) { "index" }
+    let(:controller) { double(action_name: "index") }
 
     it "builds an index breadcrumb" do
       expect_i18n "layout.breadcrumb_root" => "My root",
                   "items.index.title"      => "Items"
 
+      controller.stub(root_path: "/")
       expect_url_for [ Item ] => "/items"
 
       expect_to_add_breadcrumb("My root", "/")
@@ -30,13 +29,14 @@ describe Panko::Crud, "#build" do
   end
 
   context "in controller #show" do
-    let(:action_name) { "show" }
+    let(:controller) { double(action_name: "show") }
     let(:item) { Item.new }
 
     it "builds a show breadcrumb" do
       expect_i18n "layout.breadcrumb_root" => "My root",
                   "items.index.title"      => "Items"
 
+      controller.stub(root_path: "/")
       expect_url_for [ Item ] => "/items",
                      [ item ] => "/items/123"
 
