@@ -11,7 +11,7 @@ class ItemBreadcrumbs < Panko::Crud
 end
 
 describe Panko::Crud, "#build" do
-  let(:controller) { double(:controller, super_admin?: false, action_name: action_name, root_path: "/") }
+  let(:controller) { double(:controller, action_name: action_name, root_path: "/") }
 
   context "in controller #index" do
     let(:action_name) { "index" }
