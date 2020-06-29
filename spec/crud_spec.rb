@@ -1,21 +1,26 @@
 require "spec_helper"
 require "panko/crud"
 
-class Item
-  def to_s
-    "Item 123"
-  end
-end
-
-class ItemBreadcrumbs < Panko::Crud
-end
-
 describe Panko::Crud, "#build" do
+  let(:item_class) do
+    Class.new do
+      def to_s
+        "Item 123"
+      end
+    end
+  end
+
+  let(:item_breadcrumbs_class) do
+    Class.new(Panko::Crud)
+  end
+
   before do
+    stub_const("Item", item_class)
+    stub_const("ItemBreadcrumbs", item_breadcrumbs_class)
     expect_i18n "layout.breadcrumb_root" => "My root",
                 "items.index.title"      => "Items"
 
-    controller.stub(root_path: "/")
+    allow(controller).to receive(:root_path).and_return("/")
     expect_url_for [ Item ] => "/items"
   end
 
