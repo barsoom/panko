@@ -12,8 +12,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/barsoom/panko"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0")
-  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.files         = Dir["lib/**/*.rb", "README.md", "LICENSE.txt"]
   spec.require_paths = ["lib"]
 
   spec.add_dependency "attr_extras"
