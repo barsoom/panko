@@ -11,6 +11,9 @@ class Panko::Base
 
   private
 
+  delegate :add_breadcrumb, :url_for,
+    to: :controller
+
   def add_root
     add_breadcrumb t("layout.breadcrumb_root"), root_path
   end
@@ -27,9 +30,4 @@ class Panko::Base
       super
     end
   end
-
-  private
-
-  delegate :add_breadcrumb, :url_for,
-    to: :controller
 end
