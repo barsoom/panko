@@ -14,8 +14,8 @@ class Panko::Crud < Panko::Base
 
   def record_class
     # E.g. "EmployeesBreadcrumbs" -> Employee.
-    self.class.name.sub(/Breadcrumbs$/, "").
-      singularize.constantize
+    self.class.name.sub(/Breadcrumbs$/, "")
+      .singularize.constantize
   end
 
   def add_index
