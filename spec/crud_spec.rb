@@ -1,4 +1,5 @@
 require "spec_helper"
+require "panko"
 require "panko/crud"
 
 describe Panko::Crud, "#build" do
