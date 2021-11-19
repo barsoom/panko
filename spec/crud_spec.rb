@@ -2,7 +2,7 @@ require "spec_helper"
 require "panko"
 require "panko/crud"
 
-describe Panko::Crud, "#build" do
+RSpec.describe Panko::Crud, "#build" do
   let(:item_class) do
     Class.new do
       def to_s
