@@ -16,8 +16,8 @@ Gem::Specification.new do |spec|
   spec.files         = Dir["lib/**/*.rb", "README.md", "LICENSE.txt"]
   spec.require_paths = [ "lib" ]
 
+  spec.add_dependency "activesupport"
   spec.add_dependency "attr_extras"
   spec.add_dependency "breadcrumbs_on_rails"
   spec.add_dependency "i18n"
-  spec.add_dependency "activesupport"
 end
