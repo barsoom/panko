@@ -60,10 +60,10 @@ class Panko::Crud < Panko::Base
   end
 
   def edit?
-    %w[edit update].include?(controller.action_name)
+    %w[ edit update ].include?(controller.action_name)
   end
 
   def new?
-    %w[new create].include?(controller.action_name)
+    %w[ new create ].include?(controller.action_name)
   end
 end
