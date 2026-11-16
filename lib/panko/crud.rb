@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "panko/base"
 
 class Panko::Crud < Panko::Base
